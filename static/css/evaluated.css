@@ -1,0 +1,71 @@
+body {
+	background:url(../image/banner.jpg) no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+}
+
+
+.formContainer {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  /*background-color: red;*/
+}
+.myform {
+  position: relative;
+  color: white;
+  text-align: center;
+  background-color: #202123;
+  width: 97%;
+  margin: 0px auto;
+  margin-top: 70px;
+  padding: 20px;
+  /*height: 400px;*/
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+table {
+  /*background: red;*/
+  width: 100%;
+}
+td, th {
+  width: 27%;
+  text-align: center;
+  /*background: red;*/
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+#term {
+  width: 15%;
+}
+
+td {
+  padding: 20px;
+  border-bottom: 1px solid white;
+  /*font-weight: 600;*/
+  font-family: 'helvetica';
+  letter-spacing: 2px;
+}
+
+th {
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid white;
+}
+
+@media (max-width: 480px) {
+  .myform {
+    width: 100%;
+    margin-top: 10%;
+    height: 500px;
+  }
+}
+

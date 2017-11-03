@@ -1,0 +1,63 @@
+{% extends "theme.html" %}
+
+{% block title %}
+Question
+{% endblock %}
+
+{% block extStyle %}
+<link href="../static/css/evaluated.css" rel='stylesheet' type='text/css' media="all" />
+{% endblock %}
+
+{% block extJS %}
+<script type="text/javascript">
+debugger;
+var name =[], vb = [], gap =[], post = [];
+  name = {{term}};
+  // name = ["sapien", "maximus"];
+  var x = name.split(",");
+  vb = {{vb}};
+  gap = {{gap}};
+  post = {{post}};
+</script>
+{% endblock %}
+{% block body %}
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="/">BACK</a>
+      <a class="navbar-brand" style="margin-left: 530px; font-weight: 700; color: white;" href="index.html">IR Assignment 3</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    </div>
+  </div>
+</nav>
+<div class="formContainer">
+  <div class="myform">
+    <table>
+        <th id="term">Query Term</th>
+        <th>VB Encoded Gap List</th>
+        <th>Gap List</th>
+        <th>Posting List</th>
+
+      <script type="text/javascript">
+      debugger;
+        for(i=0,j=0,k=0,l=0; i<x.length, j<vb.length, k<gap.length, l<post.length; i++,j++,k++,l++) {
+          if(vb[j].length == 0){
+            vb[j] = gap[k] = post[l] = "Term Not Found";
+          }
+          document.writeln("<tr><td>" + x[i] + "</td>");
+          document.writeln("<td>[ " + vb[j] + " ]</td>");
+          document.writeln("<td>[ " + gap[k] + " ]</td>");
+          document.writeln("<td>[ " + post[l] + " ]</td></tr>");
+        }  
+      </script>
+    </table>
+  </div>  
+</div>
+
+{% endblock %}
